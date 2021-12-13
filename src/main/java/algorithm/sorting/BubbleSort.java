@@ -1,21 +1,24 @@
 package algorithm.sorting;
 
-public class BubbleSort {
+/**
+ * This class implements the bubble sort algorithm.
+ * @author Kunlei Lian
+ */
+public final class BubbleSort {
   public static void sort(int[] arr) {
-    int size = arr.length;
-    for (int i = size - 1; i >= 1; i--) {
-      for (int j = 0; j < i; j++) {
-        if (arr[j] > arr[j + 1]) {
-          int temp = arr[j];
-          arr[j] = arr[j + 1];
-          arr[j + 1] = temp;
+    for (int outer = arr.length - 1; outer >= 1; outer--) {
+      for (int inner = 0; inner < outer; inner++) {
+        if (arr[inner] > arr[inner + 1]) {
+          int temp = arr[inner];
+          arr[inner] = arr[inner + 1];
+          arr[inner + 1] = temp;
         }
       }
     }
   }
 
   public static void main(String[] args) {
-    int[] arr = {5, 4, 3, 2, 1, 7, 6, 9, 10, 13, 11, 12};
+    int[] arr = {5, 4, 3, 2, 1};
     System.out.println("Before sorting:");
     for (int i : arr) {
       System.out.printf("%4d", i);
