@@ -5,10 +5,16 @@ public final class InsertionSort {
   public static void sort(int[] arr) {
     for (int outer = 1; outer < arr.length; outer++) {
       int temp = arr[outer];
-      for (int i = outer - 1; i >= 0; i--) {
-        if (arr[i] > temp) {
-          arr[i + 1] = arr[i];
+      int inner;
+      for (inner = outer - 1; inner >= 0; inner--) {
+        if (arr[inner] > temp) {
+          arr[inner + 1] = arr[inner];
+        } else {
+          break;
         }
+      }
+      if (inner != outer - 1) {
+        arr[inner + 1] = temp;
       }
     }
   }
@@ -21,7 +27,7 @@ public final class InsertionSort {
     }
     System.out.println();
 
-    SelectionSort.sort(arr);
+    InsertionSort.sort(arr);
     System.out.println("After sorting:");
     for (int i : arr) {
       System.out.printf("%4d", i);
