@@ -1,4 +1,4 @@
-package algorithm.sorting;
+package algorithm.sort;
 
 /**
  * This class implements the bubble sort algorithm.

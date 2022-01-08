@@ -1,4 +1,4 @@
-package algorithm.sorting;
+package algorithm.sort;
 
 public final class MergeSort {
   public static void sort(int[] arr) {
