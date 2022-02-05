@@ -44,5 +44,6 @@ public class BinarySearch {
     int target = 100;
     int idx = find(array, target);
     System.out.println("idx = " + idx);
+
   }
 }
